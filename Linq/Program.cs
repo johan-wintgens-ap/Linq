@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,43 +23,82 @@ namespace Linq
                 };
 
             //oefening 1
-            /*var bewapendeschepen = from bewapend in schepen
-                                   where bewapend.Bewapend == true
-                                   select bewapend;
+            //Alle schepen die bewapend zijn
+            //var bewapendeschepen = from bewapend in schepen
+            //                       where bewapend.Bewapend == true
+            //                       select bewapend;
 
-            foreach (var bewapend in bewapendeschepen)
-            {
-                Console.WriteLine(bewapend.Naam);
-            }*/
+            //foreach (var bewapend in bewapendeschepen)
+            //{
+            //    Console.WriteLine(bewapend.Naam);
+            //}
 
             //oefening 2
-            /*var traagonbewapend = from slowUA in schepen
-                                  where slowUA.Snelheid < 3
-                                  where slowUA.Bewapend == false
-                                  select slowUA;
+            //Alle schepen die trager dan 3 snelheid hebben en niet bewapend zijn
+            //var traagonbewapend = from slowUA in schepen
+            //                      where slowUA.Snelheid < 3
+            //                      where slowUA.Bewapend == false
+            //                      select slowUA;
 
-            foreach (var slowUA in traagonbewapend)
-            {
-                Console.WriteLine(slowUA.Naam);
-            }*/
+            //foreach (var slowUA in traagonbewapend)
+            //{
+            //    Console.WriteLine(slowUA.Naam);
+            //}
 
             //oefening 3
-            /*var speedrank = from SR in schepen
-                            orderby SR.Snelheid
-                            select SR;
-            foreach (var ruimteschip in speedrank)
-            {
-                Console.WriteLine(ruimteschip.Naam);
-            }*/
+            //Groepeer de schepen op hun snelheid
+            //var speedrank = from SR in schepen
+            //                orderby SR.Snelheid
+            //                select SR;
+            //foreach (var ruimteschip in speedrank)
+            //{
+            //    Console.WriteLine(ruimteschip.Naam);
+            //}
 
             //oefening 4
-            var countspeed = from FS in schepen
-                             where FS.Snelheid == 1
-                             select FS;
-            foreach (var ruimteschip in countspeed)
-            {
-                Console.WriteLine(ruimteschip.Naam);
-            }
+            //Tel het aantal schepen wiens snelheid gelijk is aan 1
+            //var countspeed = from FS in schepen
+            //                 where FS.Snelheid == 1
+            //                 select FS;
+            //foreach (var ruimteschip in countspeed)
+            //{
+            //    Console.WriteLine(ruimteschip.Naam);
+            //}
+
+            //oefening 5
+            //Toon het eerst schip wiens capaciteit 3 is
+            //var fixedcap = from FC in schepen
+            //    where FC.Capaciteit == 3
+            //    select FC;
+            //foreach (var FC in fixedcap)
+            //{
+            //    Console.WriteLine(FC.Naam);
+            //}
+
+            //oefening 6
+            //Order de schepen op capaciteit
+            //var orderedships = from os in schepen
+            //    orderby os.Capaciteit
+            //    select os;
+            //foreach (var os in orderedships)
+            //{
+            //    Console.WriteLine(os.Naam);
+            //}
+
+            //oefening 7
+            //Order de schepen op snelheid en toon het laatste schip
+            //var lastShipBySpeed = from ss in schepen
+            //    orderby ss.Snelheid
+            //    select ss;
+            //Console.WriteLine(lastShipBySpeed.Last().Naam);
+
+            //oefening 8
+            //Neem de eerste 2 schepen die een capaciteit hebben groter dan 5
+            //var biggerCap = from bC in schepen
+            //    where bC.Capaciteit > 5
+            //    select bC;
+            //Console.WriteLine(biggerCap.ElementAt(0).Naam);
+            //Console.WriteLine(biggerCap.ElementAt(1).Naam);
         }
     }
 }
