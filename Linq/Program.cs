@@ -30,6 +30,35 @@ namespace Linq
             {
                 Console.WriteLine(bewapend.Naam);
             }*/
+
+            //oefening 2
+            /*var traagonbewapend = from slowUA in schepen
+                                  where slowUA.Snelheid < 3
+                                  where slowUA.Bewapend == false
+                                  select slowUA;
+
+            foreach (var slowUA in traagonbewapend)
+            {
+                Console.WriteLine(slowUA.Naam);
+            }*/
+
+            //oefening 3
+            /*var speedrank = from SR in schepen
+                            orderby SR.Snelheid
+                            select SR;
+            foreach (var ruimteschip in speedrank)
+            {
+                Console.WriteLine(ruimteschip.Naam);
+            }*/
+
+            //oefening 4
+            var countspeed = from FS in schepen
+                             where FS.Snelheid == 1
+                             select FS;
+            foreach (var ruimteschip in countspeed)
+            {
+                Console.WriteLine(ruimteschip.Naam);
+            }
         }
     }
 }
